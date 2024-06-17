@@ -114,7 +114,7 @@ def deepest_depth(tokens,speech_tokens):
                 if t.postag is not None:
                     if t.postag[0] != 'u':
                         coll_counts[0] = coll_counts[0] + 1
-                    if t.postag[4] != 'o': 
+                    if t.postag[4] == 'o': 
                         coll_counts[1] = coll_counts[1] + 1
                 if t.lemma == 'ἄν':
                     coll_counts[2] = coll_counts[2]+1
@@ -195,7 +195,7 @@ def deepest_gorman_depth(tokens,speech_tokens):
                 if t.postag is not None and len(t.postag) > 0:
                     if t.postag[0] != 'u':
                         gor_coll_counts[0] = gor_coll_counts[0] + 1
-                    if t.postag[4] != 'o':
+                    if t.postag[4] == 'o':
                         gor_coll_counts[1] = gor_coll_counts[1] + 1
                 if t.lemma is not None and t.lemma == "ἄν1":
                     gor_coll_counts[2] = gor_coll_counts[2] + 1
